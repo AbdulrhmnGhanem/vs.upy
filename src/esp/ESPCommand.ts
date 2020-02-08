@@ -6,7 +6,10 @@ export class ESPCommand implements IESPCommand {
         public optionalArgs?: OptionalCmdArg[]) { }
 
     private buildCommand(): string {
-        return '';
+        const space = ' ';
+        return `${ this.id }` + space +
+            `${ this.positionalArgs? this.positionalArgs.join(space) + space: '' }` +
+            `${ this.optionalArgs? this.optionalArgs.map(a => a.join(space)).join(space): '' }`;
     }
 
     get cmd(): string {
