@@ -1,4 +1,4 @@
-import { exec } from 'child_process';
+import { IESPCommand } from './IESPCommand';
 
 
 export class ESPToolPy {
@@ -32,14 +32,14 @@ export class ESPToolPy {
             .join(space);
 
         
-        return `esptool.py ${commandELements}`;
+        return `${this.temp} ${commandELements}`;
     }
 
     get cmd() {
         return this.buildCommand();
     }
 
-    public exec(): void {
+    public exec(command: IESPCommand): void {
         //TODO
     }
 }
