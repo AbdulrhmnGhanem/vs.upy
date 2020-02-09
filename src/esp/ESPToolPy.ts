@@ -1,3 +1,6 @@
+import { exec } from 'child_process';
+
+
 export class ESPToolPy {
     private temp = 'esptool.py';
     private options: [string, string | undefined][] = [];
@@ -34,5 +37,9 @@ export class ESPToolPy {
 
     get cmd() {
         return this.buildCommand();
+    }
+
+    public exec(): void {
+        //TODO
     }
 }

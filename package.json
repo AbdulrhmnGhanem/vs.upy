@@ -38,6 +38,7 @@
 		"chai": "^4.2.0",
 		"glob": "^7.1.5",
 		"mocha": "^7.0.1",
+		"ts-mockito": "^2.5.0",
 		"tslint": "^5.20.0",
 		"typescript": "^3.6.4",
 		"vscode-extension-tester": "^2.4.0",
