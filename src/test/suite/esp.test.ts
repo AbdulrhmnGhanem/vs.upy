@@ -1,10 +1,11 @@
 import {assert}  from "chai";
 import { ESPCommand } from "../../esp/ESPCommand";
+import { ESPToolPy } from "../../esp/ESPToolPy";
 
 
-suite('ESP Tool Wrapper Test suite', () => {
-    const space = ' ';
-    
+const space = ' ';
+
+suite('ESP Tool Wrapper Test suite {positional arguments}', () => {
     test('should build command without any argument', () => {
         const instance = new ESPCommand('someId');
        
@@ -32,5 +33,22 @@ suite('ESP Tool Wrapper Test suite', () => {
             [['--opt1', 'val1'], ['--opt2', 3]]);
         
         assert.equal(instace.cmd, instId + space + 'pos1 2 pos3 --opt1 val1 --opt2 3');
+    });
+});
+
+
+suite('ESP Tool Wrapper Test suite {optional arguments}', () => {
+    test('should build command without any arguments', () => {
+        const instace = new ESPToolPy();
+
+        assert.equal(instace.cmd, 'esptool.py' + space);
+    });
+
+    test('should command with arguments', () => {
+        // passing ' ' a space for truthy arguments that doesn't have a value
+        // a bit hacky 
+        const instace = new ESPToolPy('esp32', '/dev/ttyUSB0', undefined, ' ');
+
+        assert.equal(instace.cmd, `esptool.py -c esp32 -p /dev/ttyUSB0 -t${space}` + space);
     });
 });
