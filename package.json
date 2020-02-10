@@ -36,6 +36,7 @@
 		"@types/node": "^12.11.7",
 		"@types/vscode": "^1.42.0",
 		"chai": "^4.2.0",
+		"fsify": "^3.0.0",
 		"glob": "^7.1.5",
 		"mocha": "^7.0.1",
 		"ts-mockito": "^2.5.0",
