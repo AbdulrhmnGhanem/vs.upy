@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "vscode-upy" is now active!');
 
-	let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
+	let disposable = vscode.commands.registerCommand('extension.helloWorld', async () => {
 		vscode.window.showInformationMessage('Hello World!');
 	});
 
