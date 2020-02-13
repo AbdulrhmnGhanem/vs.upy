@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
-import { readdir, lstatSync, readdirSync, readSync } from 'fs';
-import { join, sep } from 'path';
+import * as assert from 'assert';
 
 import { commands } from './commands';
 

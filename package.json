@@ -11,7 +11,8 @@
 		"Snippets"
 	],
 	"activationEvents": [
-		"onCommand:extension.loadRam"
+		"onCommand:extension.loadRam",
+		"onCommand:extension.dumpMem"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -19,6 +20,10 @@
 			{
 				"command": "extension.loadRam",
 				"title": "upy: load ram"
+			},
+			{
+				"command": "extension.dumpMem",
+				"title": "upy: dump memory"
 			}
 		]
 	},
