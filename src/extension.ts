@@ -1,13 +1,13 @@
 import * as vscode from 'vscode';
+import { readdir, lstatSync, readdirSync, readSync } from 'fs';
+import { join, sep } from 'path';
+
+import { commands } from './commands';
+
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "vscode-upy" is now active!');
-
-	let disposable = vscode.commands.registerCommand('extension.helloWorld', async () => {
-		vscode.window.showInformationMessage('Hello World!');
-	});
-
-	context.subscriptions.push(disposable);
+	context.subscriptions.concat(commands);
 }
 
 export function deactivate() {}

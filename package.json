@@ -11,14 +11,14 @@
 		"Snippets"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.loadRam"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.loadRam",
+				"title": "upy: load ram"
 			}
 		]
 	},

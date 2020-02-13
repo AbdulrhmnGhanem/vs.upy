@@ -1,4 +1,5 @@
 import { IESPCommand } from './IESPCommand';
+import { window } from 'vscode';
 
 
 export class ESPToolPy {
@@ -40,6 +41,6 @@ export class ESPToolPy {
     }
 
     public exec(command: IESPCommand): void {
-        //TODO
+        window.showInformationMessage(command.cmd);
     }
 }

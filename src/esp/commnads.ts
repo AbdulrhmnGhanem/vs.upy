@@ -1,23 +1,24 @@
 import { ESPCommand } from './ESPCommand';
+import { ESPCmdId } from '../constants';
 
 export namespace Commands {
-    export const loadRam            = new ESPCommand('load_ram');
-    export const dumpMemory         = new ESPCommand('dump_mem');
-    export const readMemory         = new ESPCommand('read_mem');
-    export const writeMemory        = new ESPCommand('write_mem');
-    export const writeFlash         = new ESPCommand('write_flash');
-    export const run                = new ESPCommand('run');
-    export const getImageInfo       = new ESPCommand('image_info');
-    export const makeImage          = new ESPCommand('make_image');
-    export const elfToImage         = new ESPCommand('elf2image');
-    export const readMac            = new ESPCommand('read_mac');
-    export const getChipId          = new ESPCommand('chip_id');
-    export const getFlashId         = new ESPCommand('flash_id');
-    export const readFlashStatus    = new ESPCommand('read_flash_status');
-    export const writeFlashStatus   = new ESPCommand('write_flash_status');
-    export const readFlash          = new ESPCommand('read_flash');
-    export const verifyFlash        = new ESPCommand('verify_flash');
-    export const eraseFlash         = new ESPCommand('erase_flash');
-    export const eraseRegion        = new ESPCommand('erase_region');
-    export const getVersion         = new ESPCommand('version');
+    export const loadRam            = new ESPCommand(ESPCmdId.LOAD_RAM);
+    export const dumpMemory         = new ESPCommand(ESPCmdId.DUMP_MEM);
+    export const readMemory         = new ESPCommand(ESPCmdId.READ_MEM);
+    export const writeMemory        = new ESPCommand(ESPCmdId.WRITE_MEM);
+    export const writeFlash         = new ESPCommand(ESPCmdId.WRITE_FLASH);
+    export const run                = new ESPCommand(ESPCmdId.RUN);
+    export const getImageInfo       = new ESPCommand(ESPCmdId.IMAGE_INFO);
+    export const makeImage          = new ESPCommand(ESPCmdId.MAKE_IMAGE);
+    export const elfToImage         = new ESPCommand(ESPCmdId.ELF2IMAGE);
+    export const readMac            = new ESPCommand(ESPCmdId.READ_MAC);
+    export const getChipId          = new ESPCommand(ESPCmdId.CHIP_ID);
+    export const getFlashId         = new ESPCommand(ESPCmdId.FLASH_ID);
+    export const readFlashStatus    = new ESPCommand(ESPCmdId.READ_FLASH_STATUS);
+    export const writeFlashStatus   = new ESPCommand(ESPCmdId.WRITE_FLASH_STATUS);
+    export const readFlash          = new ESPCommand(ESPCmdId.READ_FLASH);
+    export const verifyFlash        = new ESPCommand(ESPCmdId.VERIFY_FLASH);
+    export const eraseFlash         = new ESPCommand(ESPCmdId.ERASE_FLASH);
+    export const eraseRegion        = new ESPCommand(ESPCmdId.ERASE_REGION);
+    export const getVersion         = new ESPCommand(ESPCmdId.VERSION);
 }

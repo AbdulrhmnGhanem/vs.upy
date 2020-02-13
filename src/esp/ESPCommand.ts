@@ -1,7 +1,7 @@
 import { IESPCommand, OptionalCmdArg, CmdArg } from "./IESPCommand";
 
 export class ESPCommand implements IESPCommand {
-    constructor(private id: string,
+    constructor(public readonly id: string,
         public positionalArgs?: CmdArg[],
         public optionalArgs?: OptionalCmdArg[]) { }
 
