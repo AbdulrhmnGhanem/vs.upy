@@ -12,7 +12,8 @@
 	],
 	"activationEvents": [
 		"onCommand:extension.loadRam",
-		"onCommand:extension.dumpMem"
+		"onCommand:extension.dumpMem",
+		"onCommand:extension.makeImage"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -24,6 +25,10 @@
 			{
 				"command": "extension.dumpMem",
 				"title": "upy: dump memory"
+			},
+			{
+				"command": "extension.makeImage",
+				"title": "upy: make image"
 			}
 		]
 	},

@@ -1,5 +1,4 @@
 import * as vscode from 'vscode';
-import * as assert from 'assert';
 
 import { commands } from './commands';
 
