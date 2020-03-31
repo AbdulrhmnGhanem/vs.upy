@@ -56,12 +56,13 @@ async function verfiyFlashRoutine() {
         spiConnection: vscode.QuickPickItem | string;
     }
 
-    const diffOptions: vscode.QuickPickItem[] = ['yes', 'no'].map(label => ({ label }));
-    const freqOptions: vscode.QuickPickItem[] = ['40m', '26m', '20m', '80m'].map(label => ({ label }));
-    const modeOptions: vscode.QuickPickItem[] = ['qio', 'qout', 'dio', 'dout'].map(label => ({ label }));
+    const createQuickPickItem = (label: string) => ({ label }) 
+    const diffOptions: vscode.QuickPickItem[] = ['yes', 'no'].map(createQuickPickItem);
+    const freqOptions: vscode.QuickPickItem[] = ['40m', '26m', '20m', '80m'].map(createQuickPickItem);
+    const modeOptions: vscode.QuickPickItem[] = ['qio', 'qout', 'dio', 'dout'].map(createQuickPickItem);
     const sizeOptions: vscode.QuickPickItem[] = ['1MB', '2MB', '4MB', '8MB', '16MB', '256KB', '512KB', '2MB-c1', '4MB-c1', 'detect', 'keep']
-                                                    .map(label => ({ label }));
-    const spiOptions: vscode.QuickPickItem[] = ['SPI', 'HSPI'].map(label => ({ label }));
+                                                    .map(createQuickPickItem);
+    const spiOptions: vscode.QuickPickItem[] = ['SPI', 'HSPI'].map(createQuickPickItem);
 
     async function collectInputs() {
         const state = { } as Partial<State>;
